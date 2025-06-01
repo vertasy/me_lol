@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
+/* Light theme (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --revertBg: rgb(255, 255, 255);
+  --bg: rgb(0, 0, 0);
+  --bgPrimary: rgb(36, 36, 36);
+  --bgPrimaryHover: rgb(255, 255, 255, 0.85);
+  --txt: rgb(0, 0, 0);
+  --txtPrimary: rgb(66, 66, 66);
+  --txtSecondary: rgb(153, 153, 153);
+  --border: rgba(40, 40, 40, 0.792);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg: var(--bg);
+  --color-txt: var(--txt);
+  --font-font-sans: var(--font-inter);
+  --color-revertBg: var(--revertBg);
+  --color-bgPrimary: var(--bgPrimary);
+  --color-bgPrimaryHover: var(--bgPrimaryHover);
+  --color-txtPrimary: var(--txtPrimary);
+  --color-txtSecondary: var(--txtSecondary);
+  --color-border: var(--border);
+  --color-icon: var(--icon);
+  --color-iconHoverBg: var(--iconHoverBg);
+  --color-font-sans: var(--font-inter);
+  --color-green: var(--green);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  background-color: var(--bg);
+  color: var(--txt);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Updated */
 }
